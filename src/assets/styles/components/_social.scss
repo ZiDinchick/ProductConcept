@@ -1,0 +1,10 @@
+.social{
+    &__icon {
+        margin-right: 2px;
+
+       &:hover svg{
+        background-color: darken($white, 40%);
+        border-radius: 50%;
+       }
+    }
+}

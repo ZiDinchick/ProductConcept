@@ -1,0 +1,13 @@
+.feature{
+    @include p1();
+    padding-left: 4.1rem;
+    width: 100%;
+    position: relative;
+
+    &::before{
+        content: url('../images/star-square-svgrepo-com.svg');
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

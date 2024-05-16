@@ -1,0 +1,100 @@
+.footer{
+    &__main{
+        @include section();
+        background-color: $primeryColor;
+    }
+
+    &__contacts{
+        display: flex;
+        flex-direction: column;
+        
+        @media ($deckstop) {
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+    }
+    
+    &__contact-form{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        margin-bottom: 4rem;
+
+        @media ($deckstop) {
+            flex-basis: 50rem;
+            margin-bottom: 0;
+            margin-right: 4.6rem;
+        }
+    }
+
+    &__input{
+        @extend %input;
+        margin-bottom: 2.1rem
+    }
+    &__textarea{
+        @extend %textarea;
+        margin-bottom: 2.1rem;
+    }
+
+    &__submit{
+        @extend %btn;
+        align-self: center;
+    }
+
+    &__contacts-items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media ($deckstop) {
+            align-items: flex-start;
+        }
+
+    }
+
+    &__title{
+        @include h2($white);
+    }
+
+    &__links{
+        display: flex;
+        flex-direction: column;
+        
+        margin-bottom: 3.2rem;
+    }   
+
+    &__link-item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+        margin-bottom: 1.8rem;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        span{
+            @include p1($white)
+        }
+    
+        svg{
+            display: block;
+            margin-right:  0.5rem; ;
+        }
+    }
+    
+    &__copyright{
+        background-color: $lightGrey;
+        padding: 0.8rem 0 0.4rem;
+
+        &-text{
+            text-align: center;
+            font-size: 1.2rem;
+            color: $secondaryColor;
+            letter-spacing: 0.3px;
+        }
+    }
+}
